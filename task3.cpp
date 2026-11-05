@@ -2,13 +2,10 @@
 
 using namespace std;
 
-// Recursive function to calculate x_n
 long long getX(int n) {
-    // Base cases: x_0 = 1, x_1 = 1
     if (n == 0 || n == 1) {
         return 1;
     }
-    // Recursive step: x_i = x_{i-1} + x_{i-2}
     return getX(n - 1) + getX(n - 2);
 }
 
