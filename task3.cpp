@@ -2,7 +2,7 @@
 
 using namespace std;
 
-long long getX(int n) {
+int getX(int n) {
     if (n == 0 || n == 1) {
         return 1;
     }

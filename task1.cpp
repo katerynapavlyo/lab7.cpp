@@ -6,12 +6,18 @@ using namespace std;
 
 double f(double x) {
     if (x > 3) {
-        double sum = 0;
-        for (int p = 1; p <= 17; p += 2) {
-            sum += pow(sin(x), p);
-        }
-        return sum;
-    } else {
+    double sum = 0;
+    double sin_x = sin(x);
+    double sin_sq = sin_x * sin_x;
+    double current_term = sin_x;
+
+    for (int p = 1; p <= 17; p += 2) {
+        sum += current_term;
+        current_term *= sin_sq;
+    }
+    return sum;
+    } 
+    else {
         double sum = 15;
         double current_tg = tan(x);
         
